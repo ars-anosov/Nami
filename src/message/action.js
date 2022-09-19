@@ -262,6 +262,18 @@ function AttendedTransfer() {
 }
 
 /**
+ * CancelAttendedTransfer Action.
+ * @constructor
+ * @see Action(String)
+ * @see See <a href="https://wiki.asterisk.org/wiki/display/AST/Asterisk+16+ManagerAction_CancelAtxfer">https://wiki.asterisk.org/wiki/display/AST/Asterisk+16+ManagerAction_CancelAtxfer</a>.
+ * @property {String} Channel Channel to transfer
+ * @augments Action
+ */
+ function CancelAttendedTransfer() {
+	CancelAttendedTransfer.super_.call(this, 'CancelAtxfer');
+}
+
+/**
  * ChangeMonitor Action.
  * @constructor
  * @see Action(String)
@@ -1242,6 +1254,7 @@ util.inherits(Action, message.Message);
         AgentLogoff,
         Agents,
         AttendedTransfer,
+        CancelAttendedTransfer,
         ChangeMonitor,
         Command,
         CreateConfig,
